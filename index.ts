@@ -4,6 +4,7 @@ import cors from 'cors'
 import path from 'path'
 import dotenv from 'dotenv'
 import { BN } from 'avalanche'
+import serverless from 'serverless-http'
 
 import { RateLimiter, parseURI } from './middlewares'
 import EVM from './vms/evm'
@@ -164,7 +165,7 @@ app.get('/ip', (req: any, res: any) => {
 app.get('*', async (req: any, res: any) => {
     res.sendFile(path.join(__dirname, "client", "index.html"))
 })
-
-app.listen(process.env.PORT || 8000, () => {
-    console.log(`Server started at port ${process.env.PORT || 8000}`)
-})
+module.exports.handler = serverless(app);
+// app.listen(process.env.PORT || 8000, () => {
+//     console.log(`Server started at port ${process.env.PORT || 8000}`)
+// })
