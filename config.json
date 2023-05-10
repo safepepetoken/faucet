@@ -13,7 +13,7 @@
         {
             "ID": "PepeSafe",
             "NAME": "PepeSafe Testnet",
-            "TOKEN": "PEPESAFE",
+            "TOKEN": "PepeSafe",
             "RPC": "https://testnet.pepesafe.finance/ext/bc/PepeSafe/rpc",
             "CHAINID": 54678,
             "EXPLORER": "https://explorer.pepesafe.finance/",
