@@ -1,0 +1,11 @@
+{
+    "banner": "/banner.png",
+    "apiBaseEndpointProduction": "/api/",
+    "apiBaseEndpointDevelopment": "http://localhost:8000/api/",
+    "apiTimeout": 10000,
+    "CAPTCHA": {
+        "siteKey": "",
+        "v2siteKey": "", 
+        "action": "faucetdrip"
+    }
+}
