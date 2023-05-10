@@ -166,4 +166,5 @@ app.get('*', async (req: any, res: any) => {
     res.sendFile(path.join(__dirname, "client", "index.html"))
 })
 
-export default serverless(app)
+module.exports = app;
+module.exports.handler = serverless(app);
