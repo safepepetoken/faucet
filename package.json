@@ -6,8 +6,8 @@
   "scripts": {
     "postinstall": "npm install --prefix client",
     "build": "npx tsc && npm run build --prefix client",
-    "start": "node build/server.js",
-    "dev": "npx --yes concurrently \"npx --yes nodemon server.ts\" \"npm run dev --prefix client\"",
+    "start": "node build/index.js",
+    "dev": "npx --yes concurrently \"npx --yes nodemon index.ts\" \"npm run dev --prefix client\"",
     "start_prod": "pm2 start npm --name \"faucet-xchain\" -- run start"
   },
   "keywords": [],
