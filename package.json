@@ -5,9 +5,10 @@
   "main": "server.js",
   "scripts": {
     "postinstall": "npm install --prefix client",
-    "build": "netlify-lambda build express",
-    "start": "node build/index.js",
-    "dev": "npx --yes concurrently \"npx --yes nodemon index.ts\" \"npm run dev --prefix client\""
+    "build": "npx tsc && npm run build --prefix client",
+    "start": "node build/server.js",
+    "dev": "npx --yes concurrently \"npx --yes nodemon server.ts\" \"npm run dev --prefix client\"",
+    "start_prod": "pm2 start npm --name \"faucet\" -- run start"
   },
   "keywords": [],
   "author": "",
@@ -18,11 +19,7 @@
     "dotenv": "^16.0.0",
     "express": "^4.18.1",
     "express-rate-limit": "^6.4.0",
-    "netlify-lambda": "^2.0.16",
-    "pug": "^3.0.2",
-    "pug-cli": "^1.0.0-alpha6",
     "range_check": "^2.0.4",
-    "serverless-http": "^3.2.0",
     "totp-generator": "^0.0.13",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4",
